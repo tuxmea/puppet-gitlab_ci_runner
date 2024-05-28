@@ -1,4 +1,3 @@
 ---
 gitlab_ci_runner::install_method: "repo"
-gitlab_ci_runner::xz_package_name: "xz"
 gitlab_ci_runner::manage_repo: true

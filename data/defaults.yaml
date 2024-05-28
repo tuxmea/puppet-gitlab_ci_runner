@@ -1,2 +1,5 @@
 ---
-gitlab_ci_runner::xz_package_name: 'xz-utils'
+gitlab_ci_runner::install_method: "binary"
+gitlab_ci_runner::manage_repo: false
+gitlab_ci_runner::manage_config_dir: true
+gitlab_ci_runner::manage_user: true

@@ -15,7 +15,9 @@
       - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Usage](#usage)
-  - [SLES](#sles)
+  - [Repository based installation](#repository-based-installation)
+  - [Binary based installation](#binary-based-installation)
+  - [SuSE based special docker handling](#suse-based-special-docker-handling)
   - [Upgrading from version 3](#upgrading-from-version-3)
   - [Limitations](#limitations)
   - [License](#license)
@@ -72,7 +74,20 @@ gitlab_ci_runner::runners:
     ensure: absent
 ```
 
-## SLES
+## Repository based installation
+
+The following OS use the repositoriy based installation per default:
+
+- RedHat based OS
+- Debian based OS
+
+## Binary based installation
+
+Any other OS can make use of the binary based installation, which is the default.
+
+## SuSE based special docker handling
+
+SuSE based systems are not compatible with [puppetlabs-docker](https://forge.puppet.com/modules/puppetlabs/docker/readme) module.
 
 There are no gitlab_ci_runner repositories for SLES/zypper available!
 Please set the following data to be able to use this module on SLES:
