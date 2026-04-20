@@ -69,12 +69,8 @@
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
         "11",
-<<<<<<< HEAD
-        "12"
-=======
         "12",
         "13"
->>>>>>> origin/master
       ]
     },
     {
