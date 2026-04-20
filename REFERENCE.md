@@ -523,7 +523,7 @@ puppet apply -e "notice(gitlab_ci_runner::register('https://gitlab.com', 'regist
 
 A function that registers a Gitlab runner on a Gitlab instance. Be careful, this will be triggered on noop runs as well!
 
-Returns: `Struct[{ id => Integer[1], token => String[1], }]` Returns a hash with the runner id and authentcation token
+Returns: `Struct[{ id => Integer[1], token => String[1], }]` Returns a hash with the runner id and authentication token
 
 ##### Examples
 
@@ -930,3 +930,4 @@ The url to your Gitlab instance. Please provide the host part only! (e.g https:/
 Data type: `String[1]`
 
 Runners authentication token.
+
