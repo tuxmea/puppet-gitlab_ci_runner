@@ -4,16 +4,74 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
-## [v5.2.0](https://github.com/voxpupuli/puppet-gitlab_ci_runner/tree/v5.1.0) (2024-07-21)
+## [v7.1.0](https://github.com/voxpupuli/puppet-gitlab_ci_runner/tree/v7.1.0) (2026-03-26)
 
-[Full Changelog](https://github.com/voxpupuli/puppet-gitlab_ci_runner/compare/v5.0.0...v5.1.0)
+[Full Changelog](https://github.com/voxpupuli/puppet-gitlab_ci_runner/compare/v7.0.0...v7.1.0)
 
 **Implemented enhancements:**
 
-- New Registration Flow being rolled out - requires adaption [\#186](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/186) ([juokelis](https://github.com/juokelis))
-- Drop RHEL/CentOS 7,8 support
-- Drop Debian 10 \(EOL\)
-- Add Debian 12
+- Debian family: use deb822 format for apt::source [\#237](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/237) ([alaunay](https://github.com/alaunay))
+
+**Fixed bugs:**
+
+- update gpg.key url, change to Stdlib::Filesource type [\#240](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/240) ([saz](https://github.com/saz))
+
+**Closed issues:**
+
+- gpg location has changed [\#239](https://github.com/voxpupuli/puppet-gitlab_ci_runner/issues/239)
+
+**Merged pull requests:**
+
+- Fix task unit tests [\#236](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/236) ([jay7x](https://github.com/jay7x))
+
+## [v7.0.0](https://github.com/voxpupuli/puppet-gitlab_ci_runner/tree/v7.0.0) (2026-01-16)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-gitlab_ci_runner/compare/v6.1.0...v7.0.0)
+
+**Breaking changes:**
+
+- drop eol ubuntu-20.04 as well as eol sles-12 [\#230](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/230) ([marcusdots](https://github.com/marcusdots))
+- Drop puppet, update openvox minimum version to 8.19 [\#223](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/223) ([TheMeier](https://github.com/TheMeier))
+
+**Implemented enhancements:**
+
+- add debian-13 support [\#232](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/232) ([marcusdots](https://github.com/marcusdots))
+- add el10 support [\#231](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/231) ([marcusdots](https://github.com/marcusdots))
+- allow puppetlabs/apt 11.x [\#229](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/229) ([marcusdots](https://github.com/marcusdots))
+- metadata.json: Add OpenVox [\#217](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/217) ([jstraw](https://github.com/jstraw))
+
+## [v6.1.0](https://github.com/voxpupuli/puppet-gitlab_ci_runner/tree/v6.1.0) (2025-02-11)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-gitlab_ci_runner/compare/v6.0.0...v6.1.0)
+
+**Merged pull requests:**
+
+- puppetlabs/apt: Allow 10.x [\#214](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/214) ([bastelfreak](https://github.com/bastelfreak))
+
+## [v6.0.0](https://github.com/voxpupuli/puppet-gitlab_ci_runner/tree/v6.0.0) (2024-11-22)
+
+[Full Changelog](https://github.com/voxpupuli/puppet-gitlab_ci_runner/compare/v5.1.0...v6.0.0)
+
+**Breaking changes:**
+
+- Drop EoL CentOS 8 support [\#204](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/204) ([bastelfreak](https://github.com/bastelfreak))
+- Upgrade Github CI and drop RHEL 7-based operating systems [\#193](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/193) ([yakatz](https://github.com/yakatz))
+- Drop Debian 10 and Ubuntu 18.04 support [\#191](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/191) ([traylenator](https://github.com/traylenator))
+- Use apt keyring on Debian [\#189](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/189) ([jonhattan](https://github.com/jonhattan))
+
+**Implemented enhancements:**
+
+- Enable gpgcheck for YUM  RPM based Distributions [\#205](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/205) ([traylenator](https://github.com/traylenator))
+- Add Ubuntu 24.04 support [\#203](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/203) ([bastelfreak](https://github.com/bastelfreak))
+- Avoid use of lsb facts [\#200](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/200) ([traylenator](https://github.com/traylenator))
+- Add basic SuSE support [\#194](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/194) ([tuxmea](https://github.com/tuxmea))
+- register\_to\_file: Support Sensitive `regtoken` [\#164](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/164) ([arusso](https://github.com/arusso))
+
+**Merged pull requests:**
+
+- Respect bolt\_supported from beaker\_helper [\#211](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/211) ([traylenator](https://github.com/traylenator))
+- Rename spec files so they run [\#210](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/210) ([traylenator](https://github.com/traylenator))
+- doc: clarify requirements for Docker [\#209](https://github.com/voxpupuli/puppet-gitlab_ci_runner/pull/209) ([kjetilho](https://github.com/kjetilho))
 
 ## [v5.1.0](https://github.com/voxpupuli/puppet-gitlab_ci_runner/tree/v5.1.0) (2023-12-04)
 
